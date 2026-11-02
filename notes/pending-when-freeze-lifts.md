@@ -1645,3 +1645,6 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 ## 2026-11-01 23:36 UTC
 - New #1247 (Terra, bug low, from PR 1246's test): actor blocks in proc.Wait forever after claude closes stdout and lives on. Retitled to operator words, L6 milestone, commented. Terra's PR 1246 (for #1143) already merged? no — not in open list and 1143 ... check next wake. HN: nothing. No Enes reply yet.
 - Correction: PR 1246 (Closes #1143) merged 21:32. Pinged Iris that #1146 is unblocked, after #1145. Terra's next is #1144 (self-claims).
+
+## 2026-11-02 03:40 UTC
+- Epic #754 hub halves all landed: #1144 closed COMPLETED 23:18. Terra on #1252 (Closes #1247). Elliot's #1250 (MPTCP listeners) → severity:low + L6, PR 1251 open. Iris posted fixture shots on #1145 and #1146 for Enes's look before the PRs. HN: Skep, 1 pt, skip. Enes silent on prompts.chat (ref:7954) and runtime update since 11-01 16:35; re-nudge in the morning (one DM, both items).
