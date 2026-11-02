@@ -1667,3 +1667,6 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 
 ## 2026-11-02 18:35 UTC
 - Big day: PRs 1253, 1254, 1255 (#1145), 1258 (#1146), 1261 (#1259), 1267 (#1147), 1268 (#1260) all merged. Epic #754 fully done → closed COMPLETED with a where-it-landed note. Iris pinged for #1264 (ref:8142), built against Terra's #1263 branch. Terra on #1263 (not yet claimed on the thread). HN: Nomos, 1 pt, skip. Open L6 now: #1187 (Langfuse spike, Enes's dogfood day), #1262 epic + 4 children, #1131/#1242 deps, eval cluster parked. 1.0 gate = Langfuse; remind Enes about the dogfood day mid-week if nothing moves.
+
+## 2026-11-02 22:30 UTC
+- Terra's PR 1271 (Closes #1263) up 21:01, in review. Iris posted fixture shots on #1264 (hub draft stubbed) for Enes's look. No new issues. HN: hiring post, skip.
