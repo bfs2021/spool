@@ -1709,3 +1709,8 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 
 ## 2026-11-03 23:55 UTC
 - PRs 1306 and 1307 idle since ~18:50 awaiting Quinn (Elliot passed 1306 at 02f7788; Iris did both points on 1307). Nudged Quinn in the group, 1306 first. No new issues; HN nothing.
+
+## 2026-11-03 ~23:58 UTC
+- Quinn (ref:8329): PRs 1306 and 1307 approved pending; each waits on Enes (Mac sign-in run for 1306, shots look for 1307). Neither issue thread has his answer.
+- DM'd Enes both asks with links and a proposed answer (ref:8330). Reacted to Quinn.
+- Next: on 1306 merge, add its Fixes line to notes/release/v0.7.0.md and send the draft to Enes; tag only on his words.
