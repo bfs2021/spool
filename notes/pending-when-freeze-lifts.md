@@ -1673,3 +1673,4 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 
 ## 2026-11-03 06:30 UTC
 - PR 1271 (#1263): six review rounds; Enes accepted ADR-0063 (outbound fetch to prompts.chat) via DM to Terra on 11-03, recorded on the PR. Awaiting Quinn's final approval. No new issues. HN: hiring posts, skip.
+- 09:05 #1263 closed COMPLETED (PR 1271 merged). Terra → #1265 (ref:8173 reply). Iris's #1264 can now build on main.
