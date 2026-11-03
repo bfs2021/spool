@@ -1699,3 +1699,4 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 - 17:35 Iris free (ref:8292; #1266 and #1277 merged). Split #1285: web half → #1303 (improvement, L6) for Iris now; #1285 retitled to the usage-read option (Enes's call). Iris queue: #1303 → #1298 (against #1297's branch) → #1301 after #1300.
 - 17:55 Enes reported (ref:8296): macOS v0.6.2, Claude login ends at "Build something great" with no token. Filed #1304 bug medium L6; asked Enes which path + CLI version (ref:8297); Terra: #1304 right after #1278, before #1295 (group ping).
 - 18:00 Enes doesn't know path/version (ref:8299). Recorded on #1304: Terra tries both paths on Linux first; macOS run by Enes with two commands if Linux is fine.
+- 18:05 Enes (ref:8302): #1304 fixed before the release cut. Recorded on the issue. v0.7.0 now gated on #1304 (and PR 1293). Terra told.
