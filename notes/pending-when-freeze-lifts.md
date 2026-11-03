@@ -1670,3 +1670,6 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 
 ## 2026-11-02 22:30 UTC
 - Terra's PR 1271 (Closes #1263) up 21:01, in review. Iris posted fixture shots on #1264 (hub draft stubbed) for Enes's look. No new issues. HN: hiring post, skip.
+
+## 2026-11-03 06:30 UTC
+- PR 1271 (#1263): six review rounds; Enes accepted ADR-0063 (outbound fetch to prompts.chat) via DM to Terra on 11-03, recorded on the PR. Awaiting Quinn's final approval. No new issues. HN: hiring posts, skip.
