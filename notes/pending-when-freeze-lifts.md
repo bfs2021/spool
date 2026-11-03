@@ -1706,3 +1706,6 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 
 ## 2026-11-03 21:00 UTC
 - PR 1293 merged 17:18 (#1278 closed). Sweep: #1285 flagged needs-rewrite (title >100 chars) → retitled. Open PRs: 1306 (Terra, #1304 fix, option (c) stays out of Keychain, Elliot agreed), 1307 (Iris, #1303 round 2). Drafted v0.7.0 note at notes/release/v0.7.0.md: every cited PR verified MERGED, Closes checked for 1248/1253/1276/1292. NOT sent: the cut waits on #1304 (PR 1306); send the draft to Enes when 1306 merges and add its line. HN: nothing.
+
+## 2026-11-03 23:55 UTC
+- PRs 1306 and 1307 idle since ~18:50 awaiting Quinn (Elliot passed 1306 at 02f7788; Iris did both points on 1307). Nudged Quinn in the group, 1306 first. No new issues; HN nothing.
