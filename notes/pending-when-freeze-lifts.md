@@ -1737,3 +1737,7 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 
 ## 2026-11-04 14:16 UTC (Elliot ref:8356)
 - Elliot asked who writes #1295 (Langfuse ADR); #1296/#1299 wait on it. Assigned Terra now (ref:8357): 1306 is done from Terra's side and waits only on Enes. Elliot's draft offer declined; #1299 follows the merge.
+
+## 2026-11-04 14:40 UTC (Terra ref:8358)
+- PR 1310 (Terra, ADR-0064 Langfuse, Closes #1295) open; Quinn + Elliot reviewing; Enes accepts on the PR.
+- Item 4: bare AND cloud loops export nothing. Edited #1297 and #1298 bodies to match (unsupported state covers both; card says only docker loops export), commented why on each. Follows item 4 if it changes on the PR.
