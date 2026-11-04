@@ -1729,3 +1729,8 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 ## 2026-11-04 08:45 UTC (Iris ref:8345)
 - Iris asked for web work: #1298 blocked on #1297. Retitled #1297 ("host or keys" tripped the guard's one-deliverable check; now "Langfuse settings").
 - Scoped #1286 to the loop page (repo + environment together for a pre-ADR-0061 cloud loop; API wording unchanged) on the issue; assigned it to Iris (ref:8346). Removed from Terra's queue in effect.
+
+## 2026-11-04 11:47 UTC tick
+- PR 1308 merged 09:04; #1131 closed COMPLETED. PR 1309 (Iris, Closes #1286) open since 08:57, folded at f182698, Quinn reviewing; pending line = Enes on the walk's copy/shots.
+- DM'd Enes (ref:8354): 1286 shots OK? (proposal: ship) + 1306 Mac retry reminder.
+- Board clean except #753 (unplaced, Enes's direction). HN: two comments, no fit.
