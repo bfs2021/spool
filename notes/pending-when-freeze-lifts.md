@@ -1758,3 +1758,6 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 ## 2026-11-04 21:30 UTC (Enes ref:8383)
 - Enes: v0.7.0 note fine, but wants spool upgrade to work on non-service hubs (native macOS) in this version. Filed #1311 (bug, medium, L6), assigned Terra first (ref:8384), replied to Enes (ref:8385).
 - v0.7.0 now gated on #1311's merge: add its Fixes line, re-verify, re-send to Enes, tag on his words. ADR-0064 acceptance on 1310 still with Enes.
+
+## 2026-11-04 21:35 UTC (Enes ref:8386)
+- Enes asked whether #1311 is Terra's or Elliot's. Elliot authored ADR-0057 and every upgrade PR (896, 1150, 1088, 1087). Reassigned to Elliot (ref:8387), told Enes (ref:8388). Lesson: ownership follows the ADR's author and the file's history, not the directory; check `gh pr list --search` for the signature before assigning.
