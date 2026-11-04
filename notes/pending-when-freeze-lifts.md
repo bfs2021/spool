@@ -1754,3 +1754,7 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 - 1306 merged 17:57 (582a545), 1309 merged 18:02 (4d4a2ad = main tip, ci success). #1304, #1286 closed COMPLETED.
 - v0.7.0 draft: added 1309 line; all 18 cited PRs MERGED, all closing issues COMPLETED. Sending to Enes now; tag only on his words: `gh release create v0.7.0 --target 4d4a2adeced3882e67cabb173d8d7d576c776a41 --title v0.7.0 --notes-file notes/release/v0.7.0.md`, then DM him that a fleet runtime update is warranted.
 - 1310 still pending Enes's acceptance (asked 17:45).
+
+## 2026-11-04 21:30 UTC (Enes ref:8383)
+- Enes: v0.7.0 note fine, but wants spool upgrade to work on non-service hubs (native macOS) in this version. Filed #1311 (bug, medium, L6), assigned Terra first (ref:8384), replied to Enes (ref:8385).
+- v0.7.0 now gated on #1311's merge: add its Fixes line, re-verify, re-send to Enes, tag on his words. ADR-0064 acceptance on 1310 still with Enes.
