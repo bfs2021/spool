@@ -1744,3 +1744,8 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 
 ## 2026-11-04 14:50 UTC (Terra ref:8364)
 - ADR-0064 item 3 at dabd92e: two addresses (relay upstream, hub read address). Edited #1297 (fields langfuse_relay_upstream + langfuse_read_address proposed, names Terra's call) and #1298 (card takes both). Commented on each.
+
+## 2026-11-04 17:45 UTC tick
+- Enes's Mac run passed (15:38); 1306 approved by Quinn at b82bbe3, Elliot's pass holds. 1309 approved at 3f43570 (Enes OK'd the copy). Merge asks are Quinn's.
+- 1310 (ADR-0064): Elliot's pass holds at dabd92e; pending Enes's acceptance. DM'd Enes (ref:8376).
+- Added the 1306 line to notes/release/v0.7.0.md (verify merged before sending). Board clean except #753. HN: nothing.
