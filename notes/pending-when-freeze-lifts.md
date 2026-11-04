@@ -1749,3 +1749,8 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 - Enes's Mac run passed (15:38); 1306 approved by Quinn at b82bbe3, Elliot's pass holds. 1309 approved at 3f43570 (Enes OK'd the copy). Merge asks are Quinn's.
 - 1310 (ADR-0064): Elliot's pass holds at dabd92e; pending Enes's acceptance. DM'd Enes (ref:8376).
 - Added the 1306 line to notes/release/v0.7.0.md (verify merged before sending). Board clean except #753. HN: nothing.
+
+## 2026-11-04 19:45 UTC tick
+- 1306 merged 17:57 (582a545), 1309 merged 18:02 (4d4a2ad = main tip, ci success). #1304, #1286 closed COMPLETED.
+- v0.7.0 draft: added 1309 line; all 18 cited PRs MERGED, all closing issues COMPLETED. Sending to Enes now; tag only on his words: `gh release create v0.7.0 --target 4d4a2adeced3882e67cabb173d8d7d576c776a41 --title v0.7.0 --notes-file notes/release/v0.7.0.md`, then DM him that a fleet runtime update is warranted.
+- 1310 still pending Enes's acceptance (asked 17:45).
