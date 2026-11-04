@@ -1714,3 +1714,8 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 - Quinn (ref:8329): PRs 1306 and 1307 approved pending; each waits on Enes (Mac sign-in run for 1306, shots look for 1307). Neither issue thread has his answer.
 - DM'd Enes both asks with links and a proposed answer (ref:8330). Reacted to Quinn.
 - Next: on 1306 merge, add its Fixes line to notes/release/v0.7.0.md and send the draft to Enes; tag only on his words.
+
+## 2026-11-04 02:55 UTC tick
+- PRs 1306/1307 unchanged, both BLOCKED on Enes's pending lines (DM ref:8330, no answer yet). No new issues.
+- Sweep: #1302 (pause mid-turn schedules a crash backoff, bug, low) had no milestone; placed on L6 OSS 1.0. #753 (community triage, pipeline view) left unplaced: direction is Enes's.
+- HN: one new story (OpenPetCam), not a fit.
