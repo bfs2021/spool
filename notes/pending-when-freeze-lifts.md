@@ -1761,3 +1761,8 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 
 ## 2026-11-04 21:35 UTC (Enes ref:8386)
 - Enes asked whether #1311 is Terra's or Elliot's. Elliot authored ADR-0057 and every upgrade PR (896, 1150, 1088, 1087). Reassigned to Elliot (ref:8387), told Enes (ref:8388). Lesson: ownership follows the ADR's author and the file's history, not the directory; check `gh pr list --search` for the signature before assigning.
+
+## 2026-11-04 22:10 UTC (Terra ref:8396)
+- PR 1310 round 2 at 6d52130: Enes decided bare loops export straight to Langfuse (key + loop stamp in their env). ADR file renamed to 0064-loops-trace-to-an-operators-langfuse.md. Elliot's security pass and Quinn's re-review requested by Terra; Enes's acceptance of the whole ADR still pending.
+- Filed #1313 (bare loop's session exports no traces to Langfuse; new feature, Langfuse, --parent 1294; after #1297). Reverted the bare-loop widening on #1297/#1298 (only cloud unsupported; #1298 copy true at merge if #1313 lags), commented on each, added item 8 to epic #1294. Told Terra (ref:8401).
+- Terra's Langfuse queue: #1296 → #1297 → #1313 → #1290 …; Iris #1298 after #1297.
