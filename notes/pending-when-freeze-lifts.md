@@ -1719,3 +1719,9 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 - PRs 1306/1307 unchanged, both BLOCKED on Enes's pending lines (DM ref:8330, no answer yet). No new issues.
 - Sweep: #1302 (pause mid-turn schedules a crash backoff, bug, low) had no milestone; placed on L6 OSS 1.0. #753 (community triage, pipeline view) left unplaced: direction is Enes's.
 - HN: one new story (OpenPetCam), not a fit.
+
+## 2026-11-04 06:57 UTC tick
+- PR 1307 merged 05:54 (Enes OK'd the shots); #1303 closed COMPLETED. Added its Fixes line to notes/release/v0.7.0.md.
+- PR 1306: Enes's first Mac run failed (CLI wrapped the link in an OSC 8 hyperlink under iTerm/ghostty TERM_PROGRAM); Terra's third commit 49d9ea8 fixes the parser; Elliot's pass renewed; Quinn reviewed the new head 06:24. Pending: Enes's Mac retry. He's on the thread, no nudge.
+- New PR 1308 (Elliot, Closes #1131, Remotion bump for zod advisory), checks green, awaiting Quinn.
+- Sweep: nothing new; #753 still unplaced (Enes's direction). HN: Sannr comment on the Postman thread, not a fit.
