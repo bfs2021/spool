@@ -1734,3 +1734,6 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 - PR 1308 merged 09:04; #1131 closed COMPLETED. PR 1309 (Iris, Closes #1286) open since 08:57, folded at f182698, Quinn reviewing; pending line = Enes on the walk's copy/shots.
 - DM'd Enes (ref:8354): 1286 shots OK? (proposal: ship) + 1306 Mac retry reminder.
 - Board clean except #753 (unplaced, Enes's direction). HN: two comments, no fit.
+
+## 2026-11-04 14:16 UTC (Elliot ref:8356)
+- Elliot asked who writes #1295 (Langfuse ADR); #1296/#1299 wait on it. Assigned Terra now (ref:8357): 1306 is done from Terra's side and waits only on Enes. Elliot's draft offer declined; #1299 follows the merge.
