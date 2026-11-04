@@ -1741,3 +1741,6 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 ## 2026-11-04 14:40 UTC (Terra ref:8358)
 - PR 1310 (Terra, ADR-0064 Langfuse, Closes #1295) open; Quinn + Elliot reviewing; Enes accepts on the PR.
 - Item 4: bare AND cloud loops export nothing. Edited #1297 and #1298 bodies to match (unsupported state covers both; card says only docker loops export), commented why on each. Follows item 4 if it changes on the PR.
+
+## 2026-11-04 14:50 UTC (Terra ref:8364)
+- ADR-0064 item 3 at dabd92e: two addresses (relay upstream, hub read address). Edited #1297 (fields langfuse_relay_upstream + langfuse_read_address proposed, names Terra's call) and #1298 (card takes both). Commented on each.
