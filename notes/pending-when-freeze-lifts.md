@@ -1858,3 +1858,4 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
   Sent draft link to Enes: ref:8560. Push recovered (6478c87).
 - 2026-11-05 16:30 — Enes (ref:8561): make it a generic software team. Renamed to Software Product Team, prompts stack-neutral; Spool kept only as a credit line in the description.
   Reply ref:8562.
+- 2026-11-05 16:40 — Enes (ref:8563) asked whether the description reaches missions. Code: promptschat/team.go oneLine(description, 280) -> channel description; prompt.go:363 shows it on the channel line of every member's prompt. Description rewritten to 272 chars, Spool credit kept.

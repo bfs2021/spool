@@ -1,11 +1,11 @@
 # prompts.chat team draft: "Software Product Team"
 
-Status: DRAFT for Enes. Nothing is published. prompts.chat publishes under CC0 (public domain).
+Status: DRAFT for Enes. Nothing is published. prompts.chat publishes under CC0 (public domain). Spool imports the team description as the channel description (one line, cut at 280 characters), which every member sees in its prompt; keep it at most 280.
 
 ## Team
 
 **Name:** Software Product Team
-**Description:** A five-person software team for any repo. A product owner turns goals into small issues. A backend and a frontend engineer ship them as PRs. A reviewer gates every merge, and a DevSecOps engineer keeps deploys and secrets safe. Humans approve merges and make the direction calls. Distilled from the team that has built Spool (github.com/enes-alatas/spool) every day since August 2026.
+**Description:** A five-role software team for any repo: a product owner files small issues, backend and frontend engineers ship them as PRs, a reviewer gates every merge, and DevSecOps guards deploys and secrets. Humans approve merges. Distilled from the team that builds Spool every day.
 **Tags:** Coding, Agent Coding, Planning, Security
 
 ## Shared rules (prepend to every member's prompt)
