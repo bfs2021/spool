@@ -1857,3 +1857,4 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 - 2026-11-05 16:25 — Enes: "publish our fleet there first" (ref:8559). Drafted notes/promptschat/spool-fleet-team.md (5 members, shared rules, handoff flow, generalized prompts). Publishing needs his prompts.chat login; content is CC0. Push to loop/milo failing since 16:10 with "fatal error in commit_refs_rules" (GitHub side).
   Sent draft link to Enes: ref:8560. Push recovered (6478c87).
 - 2026-11-05 16:30 — Enes (ref:8561): make it a generic software team. Renamed to Software Product Team, prompts stack-neutral; Spool kept only as a credit line in the description.
+  Reply ref:8562.
