@@ -1836,3 +1836,8 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 - Sweep: #1329 (make demo stops at cloud take, Iris found) placed on L6.
 - HN: more Ask HN comments, none replying to Enes.
 - v0.7.0: redraft only on Enes's word; will carry #1314/PR 1328 and the #1326 video.
+
+## 2026-11-05 15:10 UTC (Enes ref:8539: "let's cut it")
+- (Correction: the 14:55 entry's DM to Enes on PR 1331 is ref:8538, not 8516.)
+- v0.7.0 RELEASED at 111f906 (main tip; ci green). Note gained the #1326 import video (PR 1330) and #1314/PR 1328; all cited PRs MERGED, issues COMPLETED. Release run 42050627700 success, 5 assets, Images appended. Told Enes + runtime update warranted (ref:8540).
+- Still pending with Enes: PR 1331 decision (ref:8538, he'll look later).
