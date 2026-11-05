@@ -1866,3 +1866,4 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 - 2026-11-05 17:10 — Enes (ref:8571) asked routines/skills/connectors. Code: routines -> mission text only, skills named only, connectors named + egress for known hosts. Added 3 routines (PO, reviewer, devsecops), no skills, GitHub connector kept.
   Reply ref:8572.
 - 2026-11-05 17:20 — Enes (ref:8573): routines into the template (done, per bot) + think seriously about skills. Repo has 5 skills (.claude/skills: amend-adr, credential-incident, prove-event-workflow, release, review-fix); prompts.chat skills are SKILL.md. Import today only names skills.
+  Reply ref:8574: proposed (1) mine repeated work into repo skills, (2) publish generic ones, (3) import installs skills = his posture call. Awaiting go on 1/3.
