@@ -1780,3 +1780,6 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 
 ## 2026-11-05 06:40 UTC (Iris ref:8416)
 - Iris idle; no unblocked web issue. Set her on #1298's visual-options step (fixture shots of the Settings Langfuse card, posted on the issue for Enes), PR held until ADR-0064 accepted and #1297's API exists.
+
+## 2026-11-05 07:52 UTC (Enes ref:8419)
+- Enes wants one top-level reply on Ask HN 50366117 instead of replies to individuals. Sent a draft (ref:8420) following the post's numbered questions; 1 and 2 left as brackets for his own plans. Product claims verified against README (Telegram/Slack, containers + egress allowlist, wakes on timer/message, storm guard, control room, Apache-2.0); the watchdog is on main, ships in v0.7.0, so post after the tag or drop that clause.
