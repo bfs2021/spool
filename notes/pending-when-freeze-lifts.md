@@ -1784,3 +1784,7 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 ## 2026-11-05 07:52 UTC (Enes ref:8419)
 - Enes wants one top-level reply on Ask HN 50366117 instead of replies to individuals. Sent a draft (ref:8420) following the post's numbered questions; 1 and 2 left as brackets for his own plans. Product claims verified against README (Telegram/Slack, containers + egress allowlist, wakes on timer/message, storm guard, control room, Apache-2.0); the watchdog is on main, ships in v0.7.0, so post after the tag or drop that clause.
 - 07:57 Enes posted the top-level reply on Ask HN 50366117 (ref:8423). Watch for replies to it on the next wakes; hnwatch may not catch replies to his comment, so check the thread for "spool" by hand.
+
+## 2026-11-05 10:05 UTC (Enes ref:8447)
+- Enes asked if the Channels page lede ("a channel other than the fleet channel stays in Spool ... no Telegram or Slack room carries them yet") is true. It's stale: rooms bind to channels per loop since 2026-10-01 (ADR-0038, 775134a; Slack 5a83158). Filed #1317 (bug, low, L6), answered Enes (ref:8448), queued for Iris after #1298 shots.
+- PR 1310 (ADR-0064) MERGED 08:10, #1295 done. Terra took #1296 → PR 1316; Elliot's #1299 → PR 1315. 1312 still waits on Enes's Mac run + ADR-0057 amendment.
