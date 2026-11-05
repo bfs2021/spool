@@ -4,13 +4,7 @@ Publish order: create the five bots first, then the team. prompts.chat publishes
 
 Every bot: **Connectors:** GitHub (Spool opens github.com and api.github.com for it). **Computer:** do not choose cloud only; Spool turns a cloud-only bot into a cloud loop, and anything else leaves the runtime to the hub default.
 
-Routines (Spool writes each as a line in the mission; it does not schedule them — loops pace themselves. Other runtimes run them):
-- Product Owner — "Board sweep", schedule, weekdays 09:00: "Sweep the board: type and milestone on every open issue, close what has landed with a note saying where, nudge stalled PRs."
-- Quality Reviewer — "Review queue", schedule, every 2 hours: "Review every open PR waiting on you, oldest first."
-- DevSecOps Engineer — "Weekly posture check", schedule, Mondays 09:00: "Check dependency advisories, CI permissions and secret-scan results; file what needs fixing."
-- Backend and Frontend Engineer: none; they work from assignments.
-
-Skills: none. Spool only names a skill in the mission and installs nothing, so a named skill would promise what the loop does not have.
+Routines: Spool writes each routine into the mission as a line and does not schedule it (loops pace themselves); other runtimes run them. Skills: none yet.
 
 ## Team
 
@@ -24,6 +18,9 @@ Skills: none. Spool only names a skill in the mission and installs nothing, so a
 **Bot name:** Product Owner
 **Bot description:** Turns goals into small issues and keeps the team on the right work.
 **Team role label:** Product Owner
+**Connectors:** GitHub
+**Routines:** Board sweep — schedule, weekdays 09:00 — "Sweep the board: type and milestone on every open issue, close what has landed with a note saying where, nudge stalled PRs."
+**Skills:** none
 **Instructions:**
 
 ```
@@ -47,6 +44,9 @@ TEAM RULES
 **Bot name:** Backend Engineer
 **Bot description:** Ships server-side issues as small, reviewed PRs.
 **Team role label:** Backend Engineer
+**Connectors:** GitHub
+**Routines:** none (works from assignments)
+**Skills:** none
 **Instructions:**
 
 ```
@@ -70,6 +70,9 @@ TEAM RULES
 **Bot name:** Frontend Engineer
 **Bot description:** Ships UI issues as small PRs with screenshots.
 **Team role label:** Frontend Engineer
+**Connectors:** GitHub
+**Routines:** none (works from assignments)
+**Skills:** none
 **Instructions:**
 
 ```
@@ -93,6 +96,9 @@ TEAM RULES
 **Bot name:** Quality Reviewer
 **Bot description:** Reviews every PR and gates the merge.
 **Team role label:** Quality Reviewer
+**Connectors:** GitHub
+**Routines:** Review queue — schedule, every 2 hours — "Review every open PR waiting on you, oldest first."
+**Skills:** none
 **Instructions:**
 
 ```
@@ -115,6 +121,9 @@ TEAM RULES
 **Bot name:** DevSecOps Engineer
 **Bot description:** Keeps deploy, backup, upgrade and secrets safe.
 **Team role label:** DevSecOps Engineer
+**Connectors:** GitHub
+**Routines:** Weekly posture check — schedule, Mondays 09:00 — "Check dependency advisories, CI permissions and secret-scan results; file what needs fixing."
+**Skills:** none
 **Instructions:**
 
 ```

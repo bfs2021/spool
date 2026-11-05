@@ -1865,3 +1865,4 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
   Sent final (ref:8570). Next: on his team link, verify by fetching prompts.chat/api/bots/teams/<slug> (members, handoffs, description <=280).
 - 2026-11-05 17:10 — Enes (ref:8571) asked routines/skills/connectors. Code: routines -> mission text only, skills named only, connectors named + egress for known hosts. Added 3 routines (PO, reviewer, devsecops), no skills, GitHub connector kept.
   Reply ref:8572.
+- 2026-11-05 17:20 — Enes (ref:8573): routines into the template (done, per bot) + think seriously about skills. Repo has 5 skills (.claude/skills: amend-adr, credential-incident, prove-event-workflow, release, review-fix); prompts.chat skills are SKILL.md. Import today only names skills.
