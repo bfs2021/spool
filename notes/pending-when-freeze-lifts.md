@@ -1823,3 +1823,6 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 - Iris merged PR 1327 (#1325 browse links) 11:08; main tip ebbbf15, ci green. Note's import paragraph gains the links (#1325, PR #1327). v0.7.0 ready: tag target ebbbf15 on Enes's words.
 - Sweep: #1314 (Quinn: spool-restore --volumes fails on macOS, BSD tar no --occurrence) was untyped/no milestone; rewrote into bug headings, bug + severity:medium + L6. Owner: Elliot (scripts) after PR 1315. Not gating v0.7.0 (never worked; fails closed).
 - HN: two more comments on the Ask HN thread, none replying to Enes.
+
+## 2026-11-05 12:10 UTC (Enes ref:8506)
+- Enes: the demo video goes in the v0.7.0 release notes first (README too is ok); the volume fix (#1314, PR 1328) may land meanwhile. DO NOT redraft the release note until Enes says so. v0.7.0 waits on #1326's video. Noted on #1326.
