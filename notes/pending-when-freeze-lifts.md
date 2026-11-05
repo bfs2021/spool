@@ -1841,3 +1841,7 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 - (Correction: the 14:55 entry's DM to Enes on PR 1331 is ref:8538, not 8516.)
 - v0.7.0 RELEASED at 111f906 (main tip; ci green). Note gained the #1326 import video (PR 1330) and #1314/PR 1328; all cited PRs MERGED, issues COMPLETED. Release run 42050627700 success, 5 assets, Images appended. Told Enes + runtime update warranted (ref:8540).
 - Still pending with Enes: PR 1331 decision (ref:8538, he'll look later).
+
+## 2026-11-05 15:20 UTC (Enes ref:8542)
+- (Correction: the v0.7.0 release DM was ref:8541, not 8540.)
+- Enes asked how to make Fatih (prompts.chat) aware. Proposed (ref:8543): Enes sends a personal note (X/email) with v0.7.0 + demo and one ask (README Integrations listing or a "Run on Spool" link); then, only if Fatih agrees, a PR to f/prompts.chat. Draft included. Noted: prompts.chat MCP now has save_team (README Integrations), so team export is unblocked; awaiting "file the export".
