@@ -1814,3 +1814,7 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 - Iris merged PR 1318 (#1317 Channels lede) at 10:46; main tip 90ddaa7, ci green. Added its line to the v0.7.0 note. Tag target now 90ddaa7 on Enes's words.
 - 10:51 Elliot on #1323 (ref:8482, comment 6656118364): check from the hub with dial guards (https/loopback, no link-local/metadata, no redirects, coarse reasons, rate limit) plus in-process allowlist check for contained loops; secret only where one of its loops would send it. Forwarded to Enes with "accept" proposal (ref:8483).
 - 10:52 Enes: ok to both on #1323 (ref:8484); recorded on the issue. Terra queue: 1316 → 1297 → 1313 → 1320 → 1323.
+
+## 2026-11-05 11:10 UTC (Enes ref:8486)
+- "Another PR merged" = 1318 (already in the note). Filed #1325 (prompts.chat Browse bots/teams links, improvement, L6) — holding v0.7.0 for it; #1326 (third README demo: import a bot and a team, chore, L6) — not gating. Assigned Iris both, #1325 first (ref:8487); her queue after: #1319, #1321, #1322 (#1298 waits on #1297's API).
+- Told Enes (ref:8488); offered tag-now + patch alternative.
