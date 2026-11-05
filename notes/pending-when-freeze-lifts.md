@@ -1808,3 +1808,7 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 ## 2026-11-05 10:50 UTC (Enes ref:8473)
 - PR 1312 merged 10:42 (658d320 = main tip); #1311 CLOSED COMPLETED. Added its Fixes line to the v0.7.0 note, plus an Upgrading paragraph: a hand-started v0.6.x hub upgrades to v0.7.0 by hand (v0.6.x's spool upgrade still needs a unit); from v0.7.0 on, `./bin/spool upgrade --no-unit` without sudo.
 - main CI at 658d320 in progress; tag only when green and on Enes's words.
+
+## 2026-11-05 11:05 UTC (Enes ref:8479)
+- Enes's Connections asks, split one per issue (all L6): #1321 attach to loops from the Connections page (web, existing PUT/DELETE routes); #1322 filter the page by name/kind/shared/loop, layout via shots (web); #1323 hub checks a connection on add, MCP-over-HTTP initialize + GitHub App token mint, open questions on hub vs egress-proxy reach and sending the secret (Elliot then Enes); #1324 web shows the check result (waits on #1323).
+- Iris merged PR 1318 (#1317 Channels lede) at 10:46; main tip 90ddaa7, ci green. Added its line to the v0.7.0 note. Tag target now 90ddaa7 on Enes's words.
