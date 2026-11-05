@@ -1863,3 +1863,4 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 - 2026-11-05 16:50 — Enes (ref:8567): channel descriptions editable? Yes: Channels page (PATCH /api/channels/{name}, description only) and team import edits before create. Reply ref:8568.
 - 2026-11-05 17:05 — Enes (ref:8569): finalize, he publishes. Draft rebuilt paste-ready: 5 bots with full instructions (team rules inlined, rule 6 now shared-GitHub-account), connector GitHub, not cloud-only, team handoffs.
   Sent final (ref:8570). Next: on his team link, verify by fetching prompts.chat/api/bots/teams/<slug> (members, handoffs, description <=280).
+- 2026-11-05 17:10 — Enes (ref:8571) asked routines/skills/connectors. Code: routines -> mission text only, skills named only, connectors named + egress for known hosts. Added 3 routines (PO, reviewer, devsecops), no skills, GitHub connector kept.
