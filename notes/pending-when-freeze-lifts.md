@@ -1818,3 +1818,8 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 ## 2026-11-05 11:10 UTC (Enes ref:8486)
 - "Another PR merged" = 1318 (already in the note). Filed #1325 (prompts.chat Browse bots/teams links, improvement, L6) — holding v0.7.0 for it; #1326 (third README demo: import a bot and a team, chore, L6) — not gating. Assigned Iris both, #1325 first (ref:8487); her queue after: #1319, #1321, #1322 (#1298 waits on #1297's API).
 - Told Enes (ref:8488); offered tag-now + patch alternative.
+
+## 2026-11-05 12:05 UTC tick
+- Iris merged PR 1327 (#1325 browse links) 11:08; main tip ebbbf15, ci green. Note's import paragraph gains the links (#1325, PR #1327). v0.7.0 ready: tag target ebbbf15 on Enes's words.
+- Sweep: #1314 (Quinn: spool-restore --volumes fails on macOS, BSD tar no --occurrence) was untyped/no milestone; rewrote into bug headings, bug + severity:medium + L6. Owner: Elliot (scripts) after PR 1315. Not gating v0.7.0 (never worked; fails closed).
+- HN: two more comments on the Ask HN thread, none replying to Enes.
