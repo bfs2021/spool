@@ -1766,3 +1766,10 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 - PR 1310 round 2 at 6d52130: Enes decided bare loops export straight to Langfuse (key + loop stamp in their env). ADR file renamed to 0064-loops-trace-to-an-operators-langfuse.md. Elliot's security pass and Quinn's re-review requested by Terra; Enes's acceptance of the whole ADR still pending.
 - Filed #1313 (bare loop's session exports no traces to Langfuse; new feature, Langfuse, --parent 1294; after #1297). Reverted the bare-loop widening on #1297/#1298 (only cloud unsupported; #1298 copy true at merge if #1313 lags), commented on each, added item 8 to epic #1294. Told Terra (ref:8401).
 - Terra's Langfuse queue: #1296 → #1297 → #1313 → #1290 …; Iris #1298 after #1297.
+
+## 2026-11-05 00:10 UTC tick
+- PR 1312 (Elliot, Closes #1311, `spool upgrade --no-unit`): Quinn approved pending at e31028e, CI green. Pending: Enes accepts ADR-0057 amendment + one Mac run (#1311 comment 6643240898).
+- PR 1310 (ADR-0064) round 3 at 2f6f677: Quinn approved pending, Elliot's security pass holds. Pending: Enes's acceptance.
+- #1313 gained the ADR's pinned asks (https-or-loopback endpoint; redaction test for the key and its base64 Authorization value), commented.
+- DM'd Enes all three asks with proposals (ref:8413). v0.7.0: add the 1312 line on merge, re-verify, re-send.
+- Board clean except #753. HN: Gauge (docs CLI) and an AI-subscriptions thread, no fit.
