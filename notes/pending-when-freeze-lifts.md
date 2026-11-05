@@ -1853,3 +1853,5 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 - 16:02 Enes (ref:8555): can we Show HN now? Answered (ref:8556) from HN's showhn.html + newsfaq: upgrades aren't Show HN material, 'major overhaul probably ok'; reposts ok if no significant attention but 'small number' (two used). Recommended the Show HN at the 1.0 launch with the built-by-its-own-fleet story.
 
 - 2026-11-05 16:10 — Enes asked how to promote prompts.chat support (ref:8557). Verified shipped in v0.7.0 (#1271/#1274/#1291/#1327/#1330). Proposed (ref:8558): publish our fleet as a prompts.chat team (his call on which prompts go public), own LinkedIn post tagging Fatih, DM listing ask after, no new HN story. Awaiting "draft the post" or "file it".
+
+- 2026-11-05 16:25 — Enes: "publish our fleet there first" (ref:8559). Drafted notes/promptschat/spool-fleet-team.md (5 members, shared rules, handoff flow, generalized prompts). Publishing needs his prompts.chat login; content is CC0. Push to loop/milo failing since 16:10 with "fatal error in commit_refs_rules" (GitHub side).
