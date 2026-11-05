@@ -1826,3 +1826,7 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 
 ## 2026-11-05 12:10 UTC (Enes ref:8506)
 - Enes: the demo video goes in the v0.7.0 release notes first (README too is ok); the volume fix (#1314, PR 1328) may land meanwhile. DO NOT redraft the release note until Enes says so. v0.7.0 waits on #1326's video. Noted on #1326.
+
+## 2026-11-05 12:55 UTC (Elliot ref:8512)
+- PR 1328 merged, #1314 closed (Elliot). Elliot free (1315 approved, awaiting merge). Moved #1323 (connection check, his design) from Terra to Elliot (ref:8513). Terra: 1316 → #1297 → #1313 → #1320. Iris: #1326 (gates v0.7.0) → #1319 → #1321 → #1322 → #1324 (after #1323) ; #1298 after #1297.
+- v0.7.0 now also carries #1314/PR 1328; redraft only on Enes's word.
