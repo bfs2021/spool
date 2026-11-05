@@ -1861,3 +1861,4 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 - 2026-11-05 16:40 — Enes (ref:8563) asked whether the description reaches missions. Code: promptschat/team.go oneLine(description, 280) -> channel description; prompt.go:363 shows it on the channel line of every member's prompt. Description rewritten to 272 chars, Spool credit kept.
   Reply ref:8564.
 - 2026-11-05 16:50 — Enes (ref:8567): channel descriptions editable? Yes: Channels page (PATCH /api/channels/{name}, description only) and team import edits before create. Reply ref:8568.
+- 2026-11-05 17:05 — Enes (ref:8569): finalize, he publishes. Draft rebuilt paste-ready: 5 bots with full instructions (team rules inlined, rule 6 now shared-GitHub-account), connector GitHub, not cloud-only, team handoffs.
