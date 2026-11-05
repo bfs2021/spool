@@ -1873,3 +1873,4 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 - 2026-11-05 17:50 — Quinn opened #1337 (review-pr skill, Closes #1334) and asked me to review (ref:8580). Reviewed at 673f6fd: one fold (line 112 'from CONVENTIONS' vs runtime-update bullet sourced nowhere). Review 5789085998; group ref:8581. On re-ping: verify interdiff, approve, label queue, merge ask to Enes with link (I'm the reviewer here).
 - 2026-11-05 17:58 — Quinn folded 1337 at a72388a (ref:8582; dropped the runtime-update bullet). Approved at a72388a, label queue, merge ask to Enes in group ref:8583.
 - 2026-11-05 19:30 — Elliot filed #1338 (bug medium: spool upgrade misreads gh<2.49 as failed attestation; blocked fleet v0.7.0 upgrade on VPS) and took it (ref:8588). Set milestone L6. Acked by reaction.
+- 2026-11-05 21:55 — Enes (ref:8626): routines as crons. Done: 0 9 * * 1-5 / 0 */2 * * * / 0 9 * * 1, with name, type, label, prompt.

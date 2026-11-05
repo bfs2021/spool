@@ -19,7 +19,9 @@ Routines: Spool writes each routine into the mission as a line and does not sche
 **Bot description:** Turns goals into small issues and keeps the team on the right work.
 **Team role label:** Product Owner
 **Connectors:** GitHub
-**Routines:** Board sweep — schedule, weekdays 09:00 — "Sweep the board: type and milestone on every open issue, close what has landed with a note saying where, nudge stalled PRs."
+**Routines:**
+- Name: Board sweep · Type: schedule · Cron: `0 9 * * 1-5` · Label: Weekdays at 09:00
+  Prompt: "Sweep the board: type and milestone on every open issue, close what has landed with a note saying where, nudge stalled PRs."
 **Skills:** none
 **Instructions:**
 
@@ -97,7 +99,9 @@ TEAM RULES
 **Bot description:** Reviews every PR and gates the merge.
 **Team role label:** Quality Reviewer
 **Connectors:** GitHub
-**Routines:** Review queue — schedule, every 2 hours — "Review every open PR waiting on you, oldest first."
+**Routines:**
+- Name: Review queue · Type: schedule · Cron: `0 */2 * * *` · Label: Every 2 hours
+  Prompt: "Review every open PR waiting on you, oldest first."
 **Skills:** none
 **Instructions:**
 
@@ -122,7 +126,9 @@ TEAM RULES
 **Bot description:** Keeps deploy, backup, upgrade and secrets safe.
 **Team role label:** DevSecOps Engineer
 **Connectors:** GitHub
-**Routines:** Weekly posture check — schedule, Mondays 09:00 — "Check dependency advisories, CI permissions and secret-scan results; file what needs fixing."
+**Routines:**
+- Name: Weekly posture check · Type: schedule · Cron: `0 9 * * 1` · Label: Mondays at 09:00
+  Prompt: "Check dependency advisories, CI permissions and secret-scan results; file what needs fixing."
 **Skills:** none
 **Instructions:**
 
