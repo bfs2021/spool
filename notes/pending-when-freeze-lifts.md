@@ -1795,3 +1795,7 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 ## 2026-11-05 10:30 UTC (Enes ref:8459)
 - Enes: group setup is far too complicated, UI says little. Filed #1319 (improvement, L6): guided "Add to a group" step on the loop page (bot @username, add + /spool_status, live wait on rooms_changed, inline bind pick-list, unbound groups flagged, TELEGRAM.md same words); options as images to Enes first. Open question to Enes (ref:8460): record a group on my_chat_member (bot added) with no message — backend issue for Terra if yes. Slack follows separately.
 - Iris queue: #1298 shots → #1317 → #1319 (shots first). Not assigned #1319 yet; wait for Enes's my_chat_member answer since it changes the guide's steps.
+
+## 2026-11-05 10:35 UTC (Enes ref:8464)
+- Enes: yes to recording a group when the bot is added, if the adder is authorized. Filed #1320 (improvement, L6; my_chat_member, adder checked like senderAllowed, Elliot reviews posture). Clarified to Enes: Telegram reports the adder, not the creator. Commented the decision on #1319 (guide drops /spool_status, keeps it as fallback).
+- Queued in group: Terra #1320 after PR 1316; Iris #1319 after #1317 (after #1298 shots).
