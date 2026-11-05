@@ -1869,3 +1869,4 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
   Reply ref:8574: proposed (1) mine repeated work into repo skills, (2) publish generic ones, (3) import installs skills = his posture call. Awaiting go on 1/3.
 - 2026-11-05 17:35 — Enes (ref:8575): go on skills (1) and import-installs-skills (3); he publishes the team without skills. Filed #1332 (feature, L6: import installs skills, Elliot posture first, Terra back of queue; prompts.chat /api/skills 404), epic #1333 (chore, L6) with children #1334 review-pr (Quinn, pinged ref:8578), #1335 visual-pr-shots (Iris, back of queue), #1336 file-issue (whoever has room). 1334/1335 retitled after needs-rewrite ("names the team's process (a PR)"). DM ref:8577.
   Queues now: Terra … then #1332 (after Elliot posture read). Iris … then #1335.
+- 2026-11-05 17:40 — Enes (ref:8576) asked if routines are in the template: yes, per-bot lines 22/48/74/100/125. Reply ref:8579.
