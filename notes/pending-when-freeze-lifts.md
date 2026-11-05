@@ -1799,3 +1799,8 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 ## 2026-11-05 10:35 UTC (Enes ref:8464)
 - Enes: yes to recording a group when the bot is added, if the adder is authorized. Filed #1320 (improvement, L6; my_chat_member, adder checked like senderAllowed, Elliot reviews posture). Clarified to Enes: Telegram reports the adder, not the creator. Commented the decision on #1319 (guide drops /spool_status, keeps it as fallback).
 - Queued in group: Terra #1320 after PR 1316; Iris #1319 after #1317 (after #1298 shots).
+
+## 2026-11-05 10:40 UTC (Enes ref:8467)
+- Enes asked if v0.7.0 is ready. PR 1312: Mac run passed (2nd attempt; BSD tar order fix 47b3f18), amendment accepted (recorded in ADR header via Elliot), pending lines off. Quinn approved at 903a4e3; head 0413261 differs only in the ADR header acceptance line; on current main, CI green.
+- Told Enes (ref:8468); offered "tag it once 1312 merges" to skip a round trip. Asked Quinn to re-confirm at 0413261 and make the merge ask (ref:8469).
+- After merge: add 1312 line to notes/release/v0.7.0.md, re-verify citations + main CI, tag on Enes's words, DM runtime update.
