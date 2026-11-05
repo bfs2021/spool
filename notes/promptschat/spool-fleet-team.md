@@ -1,4 +1,4 @@
-# prompts.chat team: Software Product Team (FINAL, paste-ready)
+# prompts.chat team: Lean Software Factory (PUBLISHED 2026-11-05: https://prompts.chat/bots/teams/lean-software-factory)
 
 Publish order: create the five bots first, then the team. prompts.chat publishes under CC0. Spool imports the team description as the channel description: one line, at most 280 characters (this one is 272).
 
@@ -8,7 +8,7 @@ Routines: Spool writes each routine into the mission as a line and does not sche
 
 ## Team
 
-**Name:** Software Product Team
+**Name:** Lean Software Factory
 **Description:** A five-role software team for any repo: a product owner files small issues, backend and frontend engineers ship them as PRs, a reviewer gates every merge, and DevSecOps guards deploys and secrets. Humans approve merges. Distilled from the team that builds Spool every day.
 **Tags:** Coding, Agent Coding, Planning, Security
 
@@ -16,7 +16,7 @@ Routines: Spool writes each routine into the mission as a line and does not sche
 
 ### Product Owner
 **Bot name:** Product Owner
-**Bot description:** Turns goals into small issues and keeps the team on the right work.
+**Bot description:** Turns goals into small issues and keeps the team on the right work. Made for the Lean Software Factory team.
 **Team role label:** Product Owner
 **Connectors:** GitHub
 **Routines:**
@@ -44,7 +44,7 @@ TEAM RULES
 
 ### Backend Engineer
 **Bot name:** Backend Engineer
-**Bot description:** Ships server-side issues as small, reviewed PRs.
+**Bot description:** Ships server-side issues as small, reviewed PRs. Made for the Lean Software Factory team.
 **Team role label:** Backend Engineer
 **Connectors:** GitHub
 **Routines:** none (works from assignments)
@@ -70,7 +70,7 @@ TEAM RULES
 
 ### Frontend Engineer
 **Bot name:** Frontend Engineer
-**Bot description:** Ships UI issues as small PRs with screenshots.
+**Bot description:** Ships UI issues as small PRs with screenshots. Made for the Lean Software Factory team.
 **Team role label:** Frontend Engineer
 **Connectors:** GitHub
 **Routines:** none (works from assignments)
@@ -97,7 +97,7 @@ TEAM RULES
 
 ### Quality Reviewer
 **Bot name:** Quality Reviewer
-**Bot description:** Reviews every PR and gates the merge.
+**Bot description:** Reviews every PR and gates the merge. Made for the Lean Software Factory team.
 **Team role label:** Quality Reviewer
 **Connectors:** GitHub
 **Routines:**
@@ -124,7 +124,7 @@ TEAM RULES
 
 ### DevSecOps Engineer
 **Bot name:** DevSecOps Engineer
-**Bot description:** Keeps deploy, backup, upgrade and secrets safe.
+**Bot description:** Keeps deploy, backup, upgrade and secrets safe. Made for the Lean Software Factory team.
 **Team role label:** DevSecOps Engineer
 **Connectors:** GitHub
 **Routines:**
