@@ -1777,3 +1777,6 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 ## 2026-11-05 04:10 UTC tick
 - No PR movement: 1312 and 1310 still wait on Enes (DM ref:8413, overnight). Board clean except #753.
 - HN: Ask HN "What's your current AI agentic setup?" (story 50366117, 170 pts). DM'd Enes two fits with drafts (ref:8414): jauzeyimam 50374746 (hand-built Claude Code via Telegram + crons + containerized task farm), pglevy 50373366 (kanban delegation). Claims checked against README. Note: draft 2's "picks up issues" is how our fleet's missions work, not a product feature; reword if he asks.
+
+## 2026-11-05 06:40 UTC (Iris ref:8416)
+- Iris idle; no unblocked web issue. Set her on #1298's visual-options step (fixture shots of the Settings Langfuse card, posted on the issue for Enes), PR held until ADR-0064 accepted and #1297's API exists.
