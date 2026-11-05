@@ -1788,3 +1788,6 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 ## 2026-11-05 10:05 UTC (Enes ref:8447)
 - Enes asked if the Channels page lede ("a channel other than the fleet channel stays in Spool ... no Telegram or Slack room carries them yet") is true. It's stale: rooms bind to channels per loop since 2026-10-01 (ADR-0038, 775134a; Slack 5a83158). Filed #1317 (bug, low, L6), answered Enes (ref:8448), queued for Iris after #1298 shots.
 - PR 1310 (ADR-0064) MERGED 08:10, #1295 done. Terra took #1296 → PR 1316; Elliot's #1299 → PR 1315. 1312 still waits on Enes's Mac run + ADR-0057 amendment.
+
+## 2026-11-05 10:20 UTC (Enes ref:8457)
+- Enes asked if a Telegram group must get a message before Spool binds it. Yes (bridge.go roomChannel): the hub learns of a group only from an inbound message from an allowlisted sender (privacy on: must @mention the bot, or /spool_status); first group with no fleet room binds to the fleet channel, later groups are recorded unbound for the loop page. Answered (ref:8458), offered a TELEGRAM.md step-5 docs fix; not filed unless he says so.
