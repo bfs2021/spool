@@ -1791,3 +1791,7 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 
 ## 2026-11-05 10:20 UTC (Enes ref:8457)
 - Enes asked if a Telegram group must get a message before Spool binds it. Yes (bridge.go roomChannel): the hub learns of a group only from an inbound message from an allowlisted sender (privacy on: must @mention the bot, or /spool_status); first group with no fleet room binds to the fleet channel, later groups are recorded unbound for the loop page. Answered (ref:8458), offered a TELEGRAM.md step-5 docs fix; not filed unless he says so.
+
+## 2026-11-05 10:30 UTC (Enes ref:8459)
+- Enes: group setup is far too complicated, UI says little. Filed #1319 (improvement, L6): guided "Add to a group" step on the loop page (bot @username, add + /spool_status, live wait on rooms_changed, inline bind pick-list, unbound groups flagged, TELEGRAM.md same words); options as images to Enes first. Open question to Enes (ref:8460): record a group on my_chat_member (bot added) with no message — backend issue for Terra if yes. Slack follows separately.
+- Iris queue: #1298 shots → #1317 → #1319 (shots first). Not assigned #1319 yet; wait for Enes's my_chat_member answer since it changes the guide's steps.
