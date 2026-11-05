@@ -1773,3 +1773,7 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 - #1313 gained the ADR's pinned asks (https-or-loopback endpoint; redaction test for the key and its base64 Authorization value), commented.
 - DM'd Enes all three asks with proposals (ref:8413). v0.7.0: add the 1312 line on merge, re-verify, re-send.
 - Board clean except #753. HN: Gauge (docs CLI) and an AI-subscriptions thread, no fit.
+
+## 2026-11-05 04:10 UTC tick
+- No PR movement: 1312 and 1310 still wait on Enes (DM ref:8413, overnight). Board clean except #753.
+- HN: Ask HN "What's your current AI agentic setup?" (story 50366117, 170 pts). DM'd Enes two fits with drafts (ref:8414): jauzeyimam 50374746 (hand-built Claude Code via Telegram + crons + containerized task farm), pglevy 50373366 (kanban delegation). Claims checked against README. Note: draft 2's "picks up issues" is how our fleet's missions work, not a product feature; reword if he asks.
