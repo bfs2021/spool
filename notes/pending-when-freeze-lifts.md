@@ -1885,3 +1885,4 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 - 2026-11-06 10:00 — Enes approved text-only skills for #1332 (Elliot ref:8672, four musts, comment 6682177667). #1341 merged. Told Terra order: #1313 → #1320 → #1332 (ref:8673).
 - 2026-11-06 11:55 — Iris #1324 spec Q (ref:8710): drop egress-allowlist bullet (hub brokers http MCP, #622). Agreed; body edited, comment 6684134825; group ref:8711.
 - 2026-11-06 14:10 — Iris relayed Enes's 'problems' filter ask (ref:8739). Verified hub stores no check result. Filed #1360 (improvement L6, Elliot: store last check, return last_check, rotate clears; schedule out) and #1361 (improvement L6, Iris: Problems n pill, after #1324 + #1360). Group ref:8740.
+- 2026-11-06 14:50 — Terra free (1313, 1320 closed; dropped dup of 1360). Told: #1332 then #1280 (ref:8750). Open PRs: 1351 vendor review skills, 1358 security-review skill, 1362 last_check, 1363 demo cloud take.
