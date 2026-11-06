@@ -1891,3 +1891,4 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 - 2026-11-06 19:50 — Iris on #1335 (ref:8765). Queue set (ref:8766): #1335 → #1365 → #1298 → #1356 → #1361 (after #1362).
 - 2026-11-06 21:25 — Quinn filed #1369 (SkillEvaluator tier 1 CI on skill PRs, Enes OK'd; needs ADR). Milestone L6, already under #1333. Assigned Elliot after #1362 (ref:8780).
 - 2026-11-06 21:30 — #1369 spec (ref:8784): option A (gate score/Gitleaks/PII/Unicode/couldn't-run; SkillSpector+Schema to summary); author metadata own commit; comment 6695961296; group ref:8787.
+- 2026-11-06 22:15 — Elliot filed #1371 (pre-push hook runs commit-subject/other-half rules, Enes's request). Retitled for guard, milestone CI reliability, Elliot after PR 1370 (ref:8808). Verify needs-rewrite cleared next wake.
