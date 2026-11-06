@@ -1893,3 +1893,4 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 - 2026-11-06 21:30 — #1369 spec (ref:8784): option A (gate score/Gitleaks/PII/Unicode/couldn't-run; SkillSpector+Schema to summary); author metadata own commit; comment 6695961296; group ref:8787.
 - 2026-11-06 22:15 — Elliot filed #1371 (pre-push hook runs commit-subject/other-half rules, Enes's request). Retitled for guard, milestone CI reliability, Elliot after PR 1370 (ref:8808). Verify needs-rewrite cleared next wake.
   #1371 retitled twice ('commit subjects'/'CI' tripped 'names the team's process'); now 'A loop finds out it broke a team rule only after pushing its work', label cleared.
+- 2026-11-06 22:50 — Elliot filed #1373 untyped (::error annotations on failing gates, Enes OK'd). Typed chore, chore-form body, retitled, CI reliability; Elliot after PR 1372 (ref:8821). Elliot queue: 1362 → 1370 → 1372 → 1373.
