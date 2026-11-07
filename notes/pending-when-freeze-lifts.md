@@ -1900,3 +1900,4 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 - 2026-11-07 04:00 — Sweep: #1381 → L6. Queued PRs 1379 1380 1382 1383.
 - 2026-11-07 08:00 — Re-nudged Enes on #1342/#1282 (ref:8858). #1378 on hold awaiting Enes (Elliot asked).
 - 2026-11-07 11:40 — Enes (via Iris ref:8877): no Langfuse settings in the room; PR 1386 closed. Filed #1388 (improvement, Langfuse milestone: hub reads langfuse.env at start). Closed #1298 not planned (comment 6706237619). Terra: #1388 before #1364 (ref:8881). Push blocked by the #1371 hook (loop/* ledger commits flagged); told Elliot.
+- 2026-11-07 12:20 — Iris: #1356/PR 1387 parked for Enes's fleet-channel rethink; told her to take #1361 now (#1362 merged) (ref:8894). #1389 (dual-surface fleet room flip, Quinn) parked with #1356, milestoned L6, comment 6706760251; Quinn ref:8909, Enes DM ref:8910. #1391 merged (loop/* push skips the hook) → ledger pushed.
