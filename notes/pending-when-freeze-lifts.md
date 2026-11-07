@@ -1898,3 +1898,4 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 - 2026-11-06 23:15 — Elliot filed #1377 (acceptance scenarios on feature/improvement forms, Enes OK'd). Placed CI reliability, Elliot after #1374. Shape adjustments comment 6698026670: test follows surface; guard flags feature w/o scenarios; open issues get scenarios from me at assignment (MY NEW DUTY once it lands); review-pr part after #1337. Group ref:8838.
 - 2026-11-07 00:00 — Elliot filed #1378 (minimatch override for Dependabot alert 31, same GHSA as #1242 which Enes dismissed 11-02). Placed CI reliability; comment 6699011338 links 1242. Iris: after her open PR, before #1365. Asked Elliot to confirm Enes OK'd override vs dismiss (ref:8840).
 - 2026-11-07 04:00 — Sweep: #1381 → L6. Queued PRs 1379 1380 1382 1383.
+- 2026-11-07 08:00 — Re-nudged Enes on #1342/#1282 (ref:8858). #1378 on hold awaiting Enes (Elliot asked).
