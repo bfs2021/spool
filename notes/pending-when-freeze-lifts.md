@@ -1920,3 +1920,4 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 - 2026-11-08 13:05 — Merged: 1409 (#1406), 1413 (#1381), 1415 (#1414). Iris took #1412. Added scenarios to #1281 and #1284. Terra → #1281 while PR 1408 waits Enes; Elliot → #1284 (moved from Terra) until ADR-0067 (ref:9101). #1305 needs a Mac — no loop can repro; leave. Enes still owes #1342 VM + ADR-0067.
 - 2026-11-08 13:25 — PR 1417 (#1284) up. Agreed Elliot's 'restart' reading (resumed session keeps doing); #1284 scenarios amended (ref:9108).
 - 2026-11-08 16:15 — PR 1417 merged (#1284). Elliot → #1302 (pause mid-turn no backoff; scenarios added) (ref:9137). ADR-0067 PR 1408 still open, folded 7b20a8a, awaiting Enes.
+- 2026-11-08 16:20 — DM'd Enes ADR-0067's 4 pending decisions with proposals (yes / yes local too / a / yes 90d) (ref:9138).
