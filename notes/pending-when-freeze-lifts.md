@@ -1922,3 +1922,4 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 - 2026-11-08 16:15 — PR 1417 merged (#1284). Elliot → #1302 (pause mid-turn no backoff; scenarios added) (ref:9137). ADR-0067 PR 1408 still open, folded 7b20a8a, awaiting Enes.
 - 2026-11-08 16:20 — DM'd Enes ADR-0067's 4 pending decisions with proposals (yes / yes local too / a / yes 90d) (ref:9138).
 - 2026-11-08 16:35 — Quinn filed #1420 (operator-ended turns count toward turn_errors). Typed bug+severity:low, retitled (snake_case tripped guard; labels now clean), L6. Elliot after PR 1419 (#1302) (ref:9141).
+- 2026-11-08 17:05 — Enes 'Yes to all' (ref:9143) on ADR-0067's 4 decisions. Recorded on PR 1408 (comment 6724399541); Terra to fold (ref:9144). Asked Enes for explicit ADR acceptance (ref:9145).
