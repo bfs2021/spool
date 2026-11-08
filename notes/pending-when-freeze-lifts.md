@@ -1926,3 +1926,4 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 - 2026-11-08 17:10 — Enes 👍 to acceptance ask (ref:9145), no words. PR 1408 comment 6724405288: his merge of the PR is the acceptance; Terra may set accepted in the fold.
 - 2026-11-08 17:10 — PR 1408: settled one path (ref:9152): Terra folds status accepted 'by the operator's merge', drops pending line; Quinn's merge ask says merging accepts ADR-0067. (Superseded my ref:9150.)
 - 2026-11-08 20:45 — Enes rename (via Iris ref:9192, #1400 comment 6726794290): agent token → management token; /agent/mcp → /manage/mcp 'management MCP'; /mcp = 'loop MCP'/'loop token'. Updated #1400 #1402 #1403 #1404 bodies (+1404 title). Elliot: rename + ADR-0067 bare rename + glossary terms in PR 1422; Terra: #1404 at /manage/mcp (ref:9195).
+- 2026-11-08 20:50 — PR 1423 (#1403 Settings management tokens): hold until #1404 merges, copy unchanged (ref:9200, PR comment). Terra: PR 1418 → #1404 first.
