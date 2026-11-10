@@ -6,7 +6,6 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
-	"strconv"
 	"time"
 
 	"github.com/enes-alatas/spool/internal/attach"
@@ -707,7 +706,15 @@ func seedRooms(ctx context.Context, db store.Store, ids map[string]string) error
 		if err != nil {
 			return fmt.Errorf("rooms: %w", err)
 		}
-		fleetRoom := fixtureRoom{id: strconv.FormatInt(loopRecord.TGGroupChatID, 10), channel: store.FleetChannel}
+		bound, err := db.Rooms().List(ctx, loopRecord.ID)
+		if err != nil {
+			return fmt.Errorf("rooms: %w", err)
+		}
+		group := store.BoundRoom(bound, store.SurfaceTelegram, store.FleetChannel)
+		if group == nil {
+			return fmt.Errorf("rooms: %s has no group", name)
+		}
+		fleetRoom := fixtureRoom{id: group.RoomID, channel: store.FleetChannel}
 		var rooms []fixtureRoom
 		switch name {
 		case "gardener":

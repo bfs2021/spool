@@ -595,8 +595,8 @@ func TestTelegramColumnsSurviveAConcurrentWriter(t *testing.T) {
 	if got.OwnerTGUserID != 5454 {
 		t.Errorf("owner = %d, want it to survive the group bind", got.OwnerTGUserID)
 	}
-	if got.TGGroupChatID != -100123 {
-		t.Errorf("group chat = %d, want it to survive the owner write", got.TGGroupChatID)
+	if group := fleetRoom(t, db, "l1", store.SurfaceTelegram); group.id != "-100123" {
+		t.Errorf("group chat = %q, want it to survive the owner write", group.id)
 	}
 
 	// And the operator's edit, decided from the row as it was before either
@@ -609,7 +609,7 @@ func TestTelegramColumnsSurviveAConcurrentWriter(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if survived.OwnerTGUserID != 5454 || survived.TGGroupChatID != -100123 {
+	if survived.OwnerTGUserID != 5454 || fleetRoom(t, db, "l1", store.SurfaceTelegram).id != "-100123" {
 		t.Fatalf("an edit that named only the mission reverted a concurrent write: %+v", survived)
 	}
 	if survived.Mission != mission {
@@ -639,7 +639,7 @@ func TestTelegramColumnsSurviveAConcurrentWriter(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if final.OwnerDMChatID != 777 || final.OwnerTGUserID != 5454 || final.TGGroupChatID != -100123 {
+	if final.OwnerDMChatID != 777 || final.OwnerTGUserID != 5454 || fleetRoom(t, db, "l1", store.SurfaceTelegram).id != "-100123" {
 		t.Fatalf("a later single-field write disturbed its neighbours: %+v", final)
 	}
 	if final.Status != store.StatusPaused || !final.WorkstationOff {

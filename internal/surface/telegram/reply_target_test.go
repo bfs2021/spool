@@ -5,6 +5,7 @@ import (
 	"io"
 	"log/slog"
 	"path/filepath"
+	"strconv"
 	"sync"
 	"testing"
 	"time"
@@ -52,7 +53,10 @@ func TestReplyTargetOnlyTheAuthorsBotSaw(t *testing.T) {
 			t.Cleanup(func() { db.Close() })
 			for _, id := range []string{"loop_a", "loop_b"} {
 				if err := db.Loops().Create(ctx, &store.Loop{ID: id, Name: id, Status: store.StatusActive, WorkspaceMode: "none", Pacing: "fixed", Runtime: store.RuntimeBare,
-					TGBotToken: id, TGBotUsername: id + "_bot", TGGroupChatID: chat}); err != nil {
+					TGBotToken: id, TGBotUsername: id + "_bot"}); err != nil {
+					t.Fatal(err)
+				}
+				if _, err := db.Rooms().Bind(ctx, id, store.SurfaceTelegram, strconv.FormatInt(chat, 10), store.FleetChannel, 0); err != nil {
 					t.Fatal(err)
 				}
 			}

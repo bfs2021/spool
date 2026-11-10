@@ -66,7 +66,7 @@ func TestLoopSlackIdentity(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if edited.SlackBotToken == "" || edited.SlackChannelID != "C0FLEET" || edited.SlackChannelBoundAt != 3 ||
+	if edited.SlackBotToken == "" || fleetRoom(t, database, "l1", store.SurfaceSlack) != (room{"C0FLEET", 3}) ||
 		edited.OwnerSlackUserID != "U0OWNER" || edited.OwnerSlackDMChannel != "D0OWNER" {
 		t.Fatalf("an unrelated edit touched the Slack columns: %+v", edited)
 	}
@@ -76,7 +76,7 @@ func TestLoopSlackIdentity(t *testing.T) {
 		t.Fatal(err)
 	}
 	if detached.SlackAppToken != "" || detached.SlackBotToken != "" || detached.SlackBotUserID != "" ||
-		detached.SlackTeamID != "" || detached.SlackChannelID != "" || detached.SlackChannelBoundAt != 0 {
+		detached.SlackTeamID != "" || fleetRoom(t, database, "l1", store.SurfaceSlack) != (room{}) {
 		t.Fatalf("detach left part of the app behind: %+v", detached)
 	}
 	if detached.OwnerSlackUserID != "U0OWNER" {

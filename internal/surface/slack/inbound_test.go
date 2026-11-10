@@ -175,12 +175,8 @@ func TestAppHearsTheChannelItBound(t *testing.T) {
 	ctx := context.Background()
 	heard := &link{loopID: "loop_terra"}
 	adapter.ingest(ctx, heard, channelEvent("U0ALICE", "first", "1.1"))
-	loopRecord, err := db.Loops().Get(ctx, "loop_terra")
-	if err != nil {
-		t.Fatal(err)
-	}
-	if loopRecord.SlackChannelID != "C0FLEET" {
-		t.Fatalf("bound to %q, want C0FLEET", loopRecord.SlackChannelID)
+	if bound := fleetRoomID(t, db, "loop_terra"); bound != "C0FLEET" {
+		t.Fatalf("bound to %q, want C0FLEET", bound)
 	}
 	elsewhere, _ := json.Marshal(map[string]any{"team_id": "T0ACME", "event": map[string]any{
 		"type": "message", "channel_type": "channel", "channel": "C0RANDOM", "user": "U0ALICE", "text": "second", "ts": "1.2"}})
@@ -212,8 +208,8 @@ func TestAStrangerIsRegisteredOnlyByALink(t *testing.T) {
 	if msgs, _ := db.Messages().List(ctx, 10); len(msgs) != 0 || got.count("loop_terra") != 0 {
 		t.Errorf("a stranger's message was stored or delivered")
 	}
-	if loopRecord, _ := db.Loops().Get(ctx, "loop_terra"); loopRecord.SlackChannelID != "" {
-		t.Errorf("a stranger bound the app to %q", loopRecord.SlackChannelID)
+	if bound := fleetRoomID(t, db, "loop_terra"); bound != "" {
+		t.Errorf("a stranger bound the app to %q", bound)
 	}
 
 	if err := db.Users().Create(ctx, &store.User{ID: "u-bea", Name: "bea", Role: store.RoleMember,
@@ -234,4 +230,18 @@ func TestAStrangerIsRegisteredOnlyByALink(t *testing.T) {
 	if msgs, _ := db.Messages().List(ctx, 10); len(msgs) != 0 {
 		t.Errorf("the code or the YES was stored as a message: %d", len(msgs))
 	}
+}
+
+// fleetRoomID is the Slack channel the loop's app carries the fleet
+// channel in, "" for none.
+func fleetRoomID(t *testing.T, db store.Store, loopID string) string {
+	t.Helper()
+	rooms, err := db.Rooms().List(context.Background(), loopID)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if room := store.BoundRoom(rooms, store.SurfaceSlack, store.FleetChannel); room != nil {
+		return room.RoomID
+	}
+	return ""
 }

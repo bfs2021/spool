@@ -217,8 +217,8 @@ func (router *Router) Send(ctx context.Context, req SendRequest) (*store.Message
 		if serr != nil || err != nil {
 			return nil, serr, err
 		}
-		if (req.From.TGBotToken != "" && req.From.TGGroupChatID != 0) ||
-			(req.From.SlackBotToken != "" && req.From.SlackChannelID != "") {
+		if (req.From.TGBotToken != "" && store.BoundRoom(rooms, store.SurfaceTelegram, store.FleetChannel) != nil) ||
+			(req.From.SlackBotToken != "" && store.BoundRoom(rooms, store.SurfaceSlack, store.FleetChannel) != nil) {
 			// the loop's bot sits in the room the fleet channel is
 			// mirrored to, so its words are bound there
 			msg.Mirror = store.MirrorPending

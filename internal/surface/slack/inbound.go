@@ -280,9 +280,16 @@ func (adapter *Adapter) roomChannel(ctx context.Context, link *link, loopRecord 
 	if room.Channel != "" {
 		return room.Channel
 	}
+	// a rooms read that fails binds nothing: "no fleet room" read from an
+	// error would move the fleet channel to this one
+	bound, err := adapter.store.Rooms().List(ctx, loopRecord.ID)
+	if err != nil {
+		adapter.log.Error("slack: read rooms for a first bind", "loop", loopRecord.Name, "err", err)
+		return ""
+	}
 	// a loop the operator took out of the fleet channel has none to bind a
 	// first room to: its room waits unbound, for the loop page (#1424)
-	if loopRecord.SlackChannelID == "" && !loopRecord.OutsideFleetChannel {
+	if store.BoundRoom(bound, store.SurfaceSlack, store.FleetChannel) == nil && !loopRecord.OutsideFleetChannel {
 		_, err := adapter.store.Rooms().Bind(ctx, loopRecord.ID, store.SurfaceSlack, channelID, store.FleetChannel, now)
 		switch {
 		case err == nil:

@@ -12,7 +12,6 @@ import (
 	"math"
 	"path/filepath"
 	"slices"
-	"strconv"
 	"strings"
 
 	"github.com/enes-alatas/spool/internal/store"
@@ -177,10 +176,8 @@ type loops struct {
 }
 
 // loopCols are the columns of a loops row, in the order Create writes them.
-// loopReadCols reads them back with the fleet channel's Telegram room, which
-// is kept in rooms (ADR-0038) and read as the loop's own two fields, and
-// with who made and last changed the loop, which only its change record
-// writes (ADR-0048).
+// loopReadCols reads them back with who made and last changed the loop,
+// which only its change record writes (ADR-0048).
 const loopCols = `id, name, mission, model, workspace_mode, workspace_path, repo_path,
 	worktree_path, branch, tick_interval_sec, min_wake_sec, max_wake_sec, idle_timeout_sec,
 	pacing, effort, subagents, daily_cap_usd, claude_login, cloud_repo, cloud_branch, cloud_repos,
@@ -192,14 +189,6 @@ const loopCols = `id, name, mission, model, workspace_mode, workspace_path, repo
 	owner_slack_user_id, owner_slack_dm_channel`
 
 const loopReadCols = loopCols + `,
-	COALESCE((SELECT CAST(room_id AS INTEGER) FROM rooms WHERE rooms.loop_id=loops.id
-		AND surface='` + store.SurfaceTelegram + `' AND channel='` + store.FleetChannel + `'), 0),
-	COALESCE((SELECT bound_at FROM rooms WHERE rooms.loop_id=loops.id
-		AND surface='` + store.SurfaceTelegram + `' AND channel='` + store.FleetChannel + `'), 0),
-	COALESCE((SELECT room_id FROM rooms WHERE rooms.loop_id=loops.id
-		AND surface='` + store.SurfaceSlack + `' AND channel='` + store.FleetChannel + `'), ''),
-	COALESCE((SELECT bound_at FROM rooms WHERE rooms.loop_id=loops.id
-		AND surface='` + store.SurfaceSlack + `' AND channel='` + store.FleetChannel + `'), 0),
 	created_by, updated_by, doing, doing_at, hub_mcp_token_hash <> '', hub_mcp_token_hash,
 	cloud_allowlist_digest, cloud_allowlist_confirmed_at, cloud_check, cloud_script_digest, paused_by, COALESCE(team, ''),
 	COALESCE((SELECT claude_login FROM teams WHERE teams.name=loops.team), '')`
@@ -220,8 +209,6 @@ func (table loops) scanLoop(row interface{ Scan(...any) error }) (*store.Loop, e
 		&loopRecord.SlackAppToken, &loopRecord.SlackBotToken, &loopRecord.SlackBotUserID, &loopRecord.SlackBotName,
 		&loopRecord.SlackTeamID, &loopRecord.SlackTeamName,
 		&loopRecord.OwnerSlackUserID, &loopRecord.OwnerSlackDMChannel,
-		&loopRecord.TGGroupChatID, &loopRecord.TGGroupBoundAt,
-		&loopRecord.SlackChannelID, &loopRecord.SlackChannelBoundAt,
 		&loopRecord.CreatedBy, &loopRecord.UpdatedBy, &loopRecord.Doing, &loopRecord.DoingAt, &loopRecord.HasHubToken, &loopRecord.HubTokenHash,
 		&loopRecord.CloudAllowlistDigest, &loopRecord.CloudAllowlistConfirmedAt, &cloudCheck, &loopRecord.CloudScriptDigest, &loopRecord.PausedBy, &loopRecord.Team, &loopRecord.TeamClaudeLogin)
 	if errors.Is(err, sql.ErrNoRows) {
@@ -292,20 +279,6 @@ func (table loops) Create(ctx context.Context, loopRecord *store.Loop) error {
 	}
 	if err := moveTeamChannels(ctx, table.db, loopRecord.ID, "", loopRecord.Team, loopRecord.CreatedAt); err != nil {
 		return err
-	}
-	// A loop created already bound, as a fixture's are: its group or its
-	// Slack channel is a room.
-	if loopRecord.TGGroupChatID != 0 {
-		if _, err := (rooms{table.db}).Bind(ctx, loopRecord.ID, store.SurfaceTelegram,
-			strconv.FormatInt(loopRecord.TGGroupChatID, 10), store.FleetChannel, loopRecord.TGGroupBoundAt); err != nil {
-			return err
-		}
-	}
-	if loopRecord.SlackChannelID != "" {
-		if _, err := (rooms{table.db}).Bind(ctx, loopRecord.ID, store.SurfaceSlack,
-			loopRecord.SlackChannelID, store.FleetChannel, loopRecord.SlackChannelBoundAt); err != nil {
-			return err
-		}
 	}
 	return nil
 }

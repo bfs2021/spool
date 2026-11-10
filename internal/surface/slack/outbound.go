@@ -197,21 +197,19 @@ func (adapter *Adapter) setReaction(ctx context.Context, loopID string, reaction
 }
 
 // roomOf is the Slack channel a loop's app carries a hub channel in, ""
-// for none. The fleet channel's is read with the loop; any other's from
-// its rooms.
+// for none, read from its rooms. A message in no channel is the fleet
+// channel's.
 func (adapter *Adapter) roomOf(ctx context.Context, loopRecord *store.Loop, channel string) string {
-	if channel == "" || channel == store.FleetChannel {
-		return loopRecord.SlackChannelID
+	if channel == "" {
+		channel = store.FleetChannel
 	}
 	rooms, err := adapter.store.Rooms().List(ctx, loopRecord.ID)
 	if err != nil {
 		adapter.log.Warn("slack: read rooms for delivery", "loop", loopRecord.Name, "err", err)
 		return ""
 	}
-	for _, room := range rooms {
-		if room.Surface == store.SurfaceSlack && room.Channel == channel {
-			return room.RoomID
-		}
+	if room := store.BoundRoom(rooms, store.SurfaceSlack, channel); room != nil {
+		return room.RoomID
 	}
 	return ""
 }
@@ -221,9 +219,6 @@ func (adapter *Adapter) roomOf(ctx context.Context, loopRecord *store.Loop, chan
 func (adapter *Adapter) boundRoom(ctx context.Context, loopRecord *store.Loop, channelID string) bool {
 	if channelID == "" {
 		return false
-	}
-	if channelID == loopRecord.SlackChannelID {
-		return true
 	}
 	rooms, err := adapter.store.Rooms().List(ctx, loopRecord.ID)
 	if err != nil {

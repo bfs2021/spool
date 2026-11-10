@@ -569,6 +569,9 @@ type loopView struct {
 	// InFleetChannel reports that the loop has a group: it receives what
 	// addresses it there and may post to it (ADR-0032).
 	InFleetChannel bool `json:"in_fleet_channel"`
+	// TGGroupChatID is the Telegram group the fleet channel's room is, read
+	// from the loop's rooms (0 = none bound).
+	TGGroupChatID int64 `json:"tg_group_chat_id"`
 	// Connections are the connections attached to the loop, name-sorted,
 	// by name and kind only: never a value (ADR-0043).
 	Connections []loopConnectionView `json:"connections"`
@@ -636,6 +639,7 @@ func (server *Server) view(ctx context.Context, loopRecord *store.Loop) *loopVie
 		HasSlackTokens: loopRecord.SlackBotToken != "", Surface: loopRecord.Surface(), WorkstationUp: true,
 		OwnerDMReady: loopRecord.OwnerDMReady(), InFleetChannel: !loopRecord.OutsideFleetChannel,
 		Connections: []loopConnectionView{}, Problems: []store.Problem{}, Health: loop.HealthOK}
+	out.TGGroupChatID, _ = strconv.ParseInt(server.fleetRoom(ctx, loopRecord, store.SurfaceTelegram), 10, 64)
 	login, from := loopRecord.Login()
 	out.ClaudeLoginFrom = from
 	if from != store.LoginFromHost {
@@ -1842,7 +1846,7 @@ func (server *Server) handleTelegramStatus(w http.ResponseWriter, r *http.Reques
 	status := map[string]any{
 		"configured":   loopRecord.TGBotToken != "",
 		"bot_username": loopRecord.TGBotUsername,
-		"group_bound":  loopRecord.TGGroupChatID != 0,
+		"group_bound":  server.fleetRoom(r.Context(), loopRecord, store.SurfaceTelegram) != "",
 	}
 	if telegram := server.Surfaces[store.SurfaceTelegram]; telegram != nil {
 		status["bridge"] = telegram.Status(loopRecord.ID)
