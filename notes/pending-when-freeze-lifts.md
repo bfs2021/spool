@@ -1952,3 +1952,4 @@ HN: 0 new. #1239 in Quinn's rounds (07:33). #1234 holds on "pin 2.1.310 vs Teste
 - 2026-11-09 23:00 — Elliot PR 1453 (#1452 release plan in /release skill + CONVENTIONS) up for Quinn; release-day role 'Elliot sends upgrade commands, operator runs them' accepted (👍 ref:9597).
 - 2026-11-09 23:05 — Quinn changes on PR 1453: patch rule vs red-tag-smoke vX.Y.(Z+1). My call (PR comment 6753197540, ref:9601): no exception; replacement follows patch rule (patch if only fixes since broken tag, else next minor); banner/step 4 say 'the next release'.
 - 2026-11-09 23:10 — Elliot reworks PR 1453 (ref:9613): plan → CONVENTIONS 'Releases' section, skill = procedure only. #1452 body updated to match (+ red-smoke no-exception, upgrade role wording); told Elliot (ref:9615). Quinn holding.
+- 2026-11-10 00:15 — PR 1453 merged (v0.8.0 milestone); #1452 closed completed. Elliot on #1454 (weekly Claude Code pin watch), PR 1456 to Quinn.
