@@ -16,6 +16,8 @@ func TestContextLimit(t *testing.T) {
 		{"anthropic.claude-opus-5", 1_000_000}, // vendor-prefixed id
 		{"CLAUDE-OPUS-5", 1_000_000},           // case is the CLI's business
 		{"opus", 1_000_000},                    // alias, matched exactly
+		{"haiku", 1_000_000},                   // alias resolves to claude-haiku-5-5 on 2.1.322
+		{"fable", 0},                           // alias resolves to claude-fable-5-2, window unstated
 		{"", 0},                                // "whatever the CLI resolves to"
 		{"fakeclaude", 0},                      // unknown: say so, don't guess
 		{"some-other-vendor-model", 0},
