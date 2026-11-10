@@ -502,14 +502,6 @@ func TestSeedFillsTheLoopsRooms(t *testing.T) {
 			t.Errorf("gardener has no %s, so no shot can show one", check.what)
 		}
 	}
-	// The fleet channel's room and the loop record name the same group:
-	// binding writes both, and a fixture where they differ is a store the
-	// hub could not have made.
-	for _, room := range rooms {
-		if room.Channel == store.FleetChannel && room.RoomID != strconv.FormatInt(gardener.TGGroupChatID, 10) {
-			t.Errorf("the fleet channel's room is %s, but gardener's group is %d", room.RoomID, gardener.TGGroupChatID)
-		}
-	}
 }
 
 // The channel shot has a message with reactions on it, one emoji put there

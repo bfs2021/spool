@@ -25,6 +25,7 @@ import (
 	"log"
 	"os"
 	"path/filepath"
+	"strconv"
 	"strings"
 	"time"
 
@@ -250,13 +251,18 @@ func seed(ctx context.Context, db store.Store, files *attach.Files) error {
 			// the hub's Bot API at a closed local port, so no poller ever
 			// carries it off the machine.
 			loopRecord.TGBotToken = "uifixture-not-a-bot"
-			loopRecord.TGGroupChatID = -1001000000000 - int64(i)
-			loopRecord.TGGroupBoundAt = ms(-20 * 24 * time.Hour)
 			loopRecord.OwnerTGUserID = 700000001
 			loopRecord.OwnerDMChatID = 700000001
 		}
 		if err := db.Loops().Create(ctx, loopRecord); err != nil {
 			return fmt.Errorf("create %s: %w", fl.name, err)
+		}
+		if fl.botUser != "" {
+			// its bot carries the fleet channel in a group of its own
+			group := strconv.FormatInt(-1001000000000-int64(i), 10)
+			if _, err := db.Rooms().Bind(ctx, loopRecord.ID, store.SurfaceTelegram, group, store.FleetChannel, ms(-20*24*time.Hour)); err != nil {
+				return fmt.Errorf("group %s: %w", fl.name, err)
+			}
 		}
 		if fl.doing != "" {
 			if _, err := db.Loops().SetDoing(ctx, loopRecord.ID, fl.doing, ms(-fl.doingAgo)); err != nil {

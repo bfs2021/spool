@@ -465,9 +465,6 @@ type Loop struct {
 
 	TGBotToken    string `json:"-"`
 	TGBotUsername string `json:"tg_bot_username"`
-	// TGGroupChatID is the Telegram group the fleet channel's room is, read
-	// from the loop's rooms (0 = none bound).
-	TGGroupChatID int64 `json:"tg_group_chat_id"`
 	// HubMCPToken is the bearer token this loop's claude process presents to
 	// the hub's MCP endpoint (ADR-0026). Minted at creation, immutable, and
 	// secret: json:"-" keeps it out of every API response, like TGBotToken.
@@ -503,10 +500,6 @@ type Loop struct {
 	// the zero value is the ordinary loop, which is in it. Surfaced to the
 	// API as in_fleet_channel, the way round a reader asks the question.
 	OutsideFleetChannel bool `json:"-"`
-	// TGGroupBoundAt is when this loop's bot bound to that group, read with
-	// it. A bot only ingests group messages Telegram dated after it — see
-	// ADR-0020.
-	TGGroupBoundAt int64 `json:"-"`
 	// OwnerTGUserID is the allowlisted Telegram sender configured as this
 	// loop's owner (0 = none). Being known to Spool does not make someone
 	// an owner; the operator chooses (#73).
@@ -528,11 +521,6 @@ type Loop struct {
 	SlackBotName   string `json:"slack_bot_name,omitempty"`
 	SlackTeamID    string `json:"slack_team_id,omitempty"`
 	SlackTeamName  string `json:"slack_team_name,omitempty"`
-	// SlackChannelID is the Slack channel the fleet channel's room is, and
-	// SlackChannelBoundAt when the app bound to it, both read from the loop's
-	// rooms ("" = none bound), as TGGroupChatID and TGGroupBoundAt are.
-	SlackChannelID      string `json:"-"`
-	SlackChannelBoundAt int64  `json:"-"`
 	// OwnerSlackUserID is the allowlisted Slack sender configured as this
 	// loop's owner ("" = none). OwnerSlackDMChannel is the DM the bot opened
 	// with them. Unlike a Telegram bot, a Slack bot can open that DM itself,
@@ -1940,7 +1928,8 @@ type Room struct {
 	Channel     string
 	FirstSeenAt int64
 	// BoundAt is when the room was bound to its channel, 0 while unbound.
-	// The ingest election reads it, as it read TGGroupBoundAt (ADR-0020).
+	// The ingest election reads it: a bot ingests only what its surface
+	// dated after it (ADR-0020).
 	BoundAt int64
 }
 
@@ -2640,4 +2629,15 @@ func (loopRecord *Loop) OwnerPerson() string {
 	default:
 		return SlackPerson(loopRecord.OwnerSlackUserID)
 	}
+}
+
+// BoundRoom is the room in rooms, a loop's as RoomStore.List returns them,
+// that carries channel on surface, or nil when none does.
+func BoundRoom(rooms []*Room, surface, channel string) *Room {
+	for _, room := range rooms {
+		if room.Surface == surface && room.Channel == channel && channel != "" {
+			return room
+		}
+	}
+	return nil
 }

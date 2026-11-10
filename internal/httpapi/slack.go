@@ -123,7 +123,7 @@ func (server *Server) handleSlackStatus(w http.ResponseWriter, r *http.Request) 
 		"bot_name":    loopRecord.SlackBotName,
 		"team_id":     loopRecord.SlackTeamID,
 		"team_name":   loopRecord.SlackTeamName,
-		"channel_id":  loopRecord.SlackChannelID,
+		"channel_id":  server.fleetRoom(r.Context(), loopRecord, store.SurfaceSlack),
 		// the link asks Slack for it; "" until it has
 		"channel_name": "",
 	}

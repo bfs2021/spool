@@ -84,13 +84,8 @@ func TestBindKeepsOneRoomPerChannel(t *testing.T) {
 	if moved.Channel != store.FleetChannel || moved.BoundAt != 400 {
 		t.Fatalf("moved room is %+v, want group bound at 400", moved)
 	}
-	loopRecord, err := db.Loops().Get(ctx, "l1")
-	if err != nil {
-		t.Fatal(err)
-	}
-	if loopRecord.TGGroupChatID != -1002 || loopRecord.TGGroupBoundAt != 400 {
-		t.Fatalf("loop reads group chat %d bound at %d, want the fleet channel's room",
-			loopRecord.TGGroupChatID, loopRecord.TGGroupBoundAt)
+	if got := fleetRoom(t, db, "l1", store.SurfaceTelegram); got != (room{"-1002", 400}) {
+		t.Fatalf("the fleet channel's room is %+v, want -1002 bound at 400", got)
 	}
 }
 
@@ -280,12 +275,8 @@ func TestRoomsMigrationKeepsTheGroup(t *testing.T) {
 	if err := db.migrate(); err != nil {
 		t.Fatal(err)
 	}
-	for id, want := range map[string][2]int64{"l1": {-1001234567890, 77}, "l2": {0, 0}} {
-		loopRecord, err := db.Loops().Get(ctx, id)
-		if err != nil {
-			t.Fatal(err)
-		}
-		if got := [2]int64{loopRecord.TGGroupChatID, loopRecord.TGGroupBoundAt}; got != want {
+	for id, want := range map[string]room{"l1": {"-1001234567890", 77}, "l2": {"", 0}} {
+		if got := fleetRoom(t, db, id, store.SurfaceTelegram); got != want {
 			t.Errorf("%s migrated to group %v, want %v", id, got, want)
 		}
 	}
@@ -332,18 +323,12 @@ func TestRoomsMigrationKeepsTheSlackChannel(t *testing.T) {
 	if err := db.migrate(); err != nil {
 		t.Fatal(err)
 	}
-	for id, want := range map[string]struct {
-		channel string
-		at      int64
-		group   int64
-	}{"l1": {"C0FLEET", 77, 0}, "l2": {"", 0, -1001234567890}} {
-		loopRecord, err := db.Loops().Get(ctx, id)
-		if err != nil {
-			t.Fatal(err)
-		}
-		if loopRecord.SlackChannelID != want.channel || loopRecord.SlackChannelBoundAt != want.at || loopRecord.TGGroupChatID != want.group {
-			t.Errorf("%s migrated to slack %q at %d, group %d; want %+v", id,
-				loopRecord.SlackChannelID, loopRecord.SlackChannelBoundAt, loopRecord.TGGroupChatID, want)
+	for id, want := range map[string]struct{ slack, group room }{
+		"l1": {room{"C0FLEET", 77}, room{}}, "l2": {room{}, room{"-1001234567890", 78}},
+	} {
+		slack, group := fleetRoom(t, db, id, store.SurfaceSlack), fleetRoom(t, db, id, store.SurfaceTelegram)
+		if slack != want.slack || group != want.group {
+			t.Errorf("%s migrated to slack %+v, group %+v; want %+v", id, slack, group, want)
 		}
 	}
 }
@@ -386,4 +371,25 @@ func TestBindTogetherMovesARoomTheLoopsShare(t *testing.T) {
 	if err := db.Rooms().BindTogether(ctx, nil, store.SurfaceTelegram, "-1001", "backend", 300); err != nil {
 		t.Fatalf("no loops: %v", err)
 	}
+}
+
+// room is a fleet channel's room as fleetRoom reads it: the chat's id and
+// when it was bound, both zero for none.
+type room struct {
+	id string
+	at int64
+}
+
+// fleetRoom reads the room the loop's identity on surface carries the
+// fleet channel in, the zero room for none.
+func fleetRoom(t *testing.T, db *DB, loopID, surface string) room {
+	t.Helper()
+	rooms, err := db.Rooms().List(context.Background(), loopID)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if bound := store.BoundRoom(rooms, surface, store.FleetChannel); bound != nil {
+		return room{bound.RoomID, bound.BoundAt}
+	}
+	return room{}
 }
