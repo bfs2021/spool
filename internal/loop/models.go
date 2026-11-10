@@ -15,8 +15,10 @@ var contextLimits = map[string]int{
 	"claude-opus-4-8":   1_000_000,
 	"claude-opus-4-7":   1_000_000,
 	"claude-opus-4-6":   1_000_000,
+	"claude-sonnet-5-5": 1_000_000,
 	"claude-sonnet-5":   1_000_000,
 	"claude-sonnet-4-6": 1_000_000,
+	"claude-haiku-5-5":  1_000_000,
 	"claude-haiku-4-5":  200_000,
 }
 
@@ -26,10 +28,11 @@ var contextLimits = map[string]int{
 // claude-opus-4-1 is a 200k model, and treating it as a megatoken one would
 // under-report a nearly full context as barely used.
 var aliasLimits = map[string]int{
-	"fable":  1_000_000,
+	// "fable" resolves to claude-fable-5-2 on 2.1.322, whose window no
+	// source states, so the alias is unknown too (#1466).
 	"opus":   1_000_000,
 	"sonnet": 1_000_000,
-	"haiku":  200_000,
+	"haiku":  1_000_000,
 }
 
 // ContextLimit returns the context window of model in tokens, or 0 when the
